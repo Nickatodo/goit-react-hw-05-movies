@@ -9,7 +9,6 @@ export default function Router() {
   const router = createBrowserRouter([
     {
       path: '/',
-      errorElement: <h1>Not found</h1>,
       element: (
         <>
           <Header></Header>
@@ -37,7 +36,6 @@ export default function Router() {
       children: [
         {
           path: '/moviedetails/:id/cast',
-          //element: <Cast></Cast>,
           lazy: async () => {
             const { Cast } = await import('../components/Cast');
             return { Component: Cast };
@@ -45,13 +43,21 @@ export default function Router() {
         },
         {
           path: '/moviedetails/:id/reviews',
-          //element: <Reviews></Reviews>,
           lazy: async () => {
             const { Reviews } = await import('../components/Reviews');
             return { Component: Reviews };
           },
         },
       ],
+    },
+    {
+      path: '*',
+      element: (
+        <>
+          <Header></Header>
+          <Home></Home>
+        </>
+      ),
     },
   ]);
   return <RouterProvider router={router}></RouterProvider>;
