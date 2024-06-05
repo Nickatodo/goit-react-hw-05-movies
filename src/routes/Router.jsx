@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 export default function Router() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/goit-react-hw-05-movies/',
       element: (
         <>
           <Header></Header>
@@ -17,7 +17,7 @@ export default function Router() {
       ),
     },
     {
-      path: '/movies',
+      path: '/goit-react-hw-05-movies/movies',
       element: (
         <>
           <Header></Header>
@@ -26,7 +26,7 @@ export default function Router() {
       ),
     },
     {
-      path: '/moviedetails/:id',
+      path: '/goit-react-hw-05-movies/moviedetails/:id',
       element: (
         <>
           <Header></Header>
@@ -35,14 +35,14 @@ export default function Router() {
       ),
       children: [
         {
-          path: '/moviedetails/:id/cast',
+          path: '/goit-react-hw-05-movies/moviedetails/:id/cast',
           lazy: async () => {
             const { Cast } = await import('../components/Cast');
             return { Component: Cast };
           },
         },
         {
-          path: '/moviedetails/:id/reviews',
+          path: '/goit-react-hw-05-movies/moviedetails/:id/reviews',
           lazy: async () => {
             const { Reviews } = await import('../components/Reviews');
             return { Component: Reviews };
@@ -62,3 +62,7 @@ export default function Router() {
   ]);
   return <RouterProvider router={router}></RouterProvider>;
 }
+
+/*
+
+*/

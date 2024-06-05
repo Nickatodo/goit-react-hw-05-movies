@@ -41,7 +41,9 @@ export function Home() {
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
-            <NavLink to={`/moviedetails/${movie.id}`}>{movie.title}</NavLink>
+            <NavLink to={`/goit-react-hw-05-movies/moviedetails/${movie.id}`}>
+              {movie.title}
+            </NavLink>
           </li>
         ))}
       </ul>

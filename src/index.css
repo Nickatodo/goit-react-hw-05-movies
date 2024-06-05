@@ -35,9 +35,6 @@ code {
   color: black;
 }
 
-.Header_Link.active {
-  color: red;
-}
 .MovieDetail {
   display: flex;
   gap: 20px;

@@ -46,7 +46,7 @@ export function Movies() {
   }
 
   function handleSearch() {
-    navigate(`/movies?query=${inputValue}`);
+    navigate(`/goit-react-hw-05-movies/movies?query=${inputValue}`);
   }
 
   return (
@@ -69,7 +69,9 @@ export function Movies() {
       <ul>
         {movies.map(movie => (
           <li key={movie.id}>
-            <NavLink to={`/moviedetails/${movie.id}?query=${inputValue}`}>
+            <NavLink
+              to={`/goit-react-hw-05-movies/moviedetails/${movie.id}?query=${inputValue}`}
+            >
               {movie.title}
             </NavLink>
           </li>

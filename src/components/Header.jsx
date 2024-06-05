@@ -5,10 +5,10 @@ export function Header() {
   return (
     <>
       <nav className="Header">
-        <NavLink to={'/'} className="Header_Link">
+        <NavLink to={'/goit-react-hw-05-movies/'} className="Header_Link">
           Home
         </NavLink>
-        <NavLink to={'/movies'} className="Header_Link">
+        <NavLink to={'/goit-react-hw-05-movies/movies'} className="Header_Link">
           Movies
         </NavLink>
       </nav>

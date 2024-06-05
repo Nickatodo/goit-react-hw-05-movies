@@ -38,9 +38,9 @@ export function MovieDetails() {
 
   const handleGoBack = () => {
     if (query) {
-      navigate(`/movies?query=${query}`);
+      navigate(`/goit-react-hw-05-movies/movies?query=${query}`);
     } else {
-      navigate('/');
+      navigate('/goit-react-hw-05-movies/');
     }
   };
 
@@ -78,7 +78,7 @@ export function MovieDetails() {
         <ul>
           <li>
             <NavLink
-              to={`/moviedetails/${movie.id}/cast${
+              to={`/goit-react-hw-05-movies/moviedetails/${movie.id}/cast${
                 query ? `?query=${query}` : ''
               }`}
               state={{ movie, query }}
@@ -88,7 +88,7 @@ export function MovieDetails() {
           </li>
           <li>
             <NavLink
-              to={`/moviedetails/${movie.id}/reviews${
+              to={`/goit-react-hw-05-movies/moviedetails/${movie.id}/reviews${
                 query ? `?query=${query}` : ''
               }`}
               state={{ movie, query }}
